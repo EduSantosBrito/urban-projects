@@ -18,11 +18,10 @@ public class StatusStateConverter {
 	}
 	
 	public static StatusState getStatusStateAsModel(StatusStateDTO statusStateDTO) {
-		if(statusStateDTO.getId() == null) {
-			
-		}
 		StatusState statusState = StateFactory.create(statusStateDTO.getStatusName());
-		statusState.setId(statusStateDTO.getId());
+		if(statusStateDTO.getId() != null) {
+			statusState.setId(statusStateDTO.getId());
+		}
 		statusState.setProjects(statusStateDTO.getProjects() != null ? ProjectConverter.getListAsModel(statusStateDTO.getProjects()) : null);
 		return statusState;
 	}
