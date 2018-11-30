@@ -18,6 +18,7 @@ import com.sejaurban.projects.dto.UserDTO;
 import com.sejaurban.projects.service.UserService;
 
 @RestController
+@CrossOrigin
 @RequestMapping("users")
 public class UserController {
 
@@ -49,7 +50,7 @@ public class UserController {
 		userService.delete(id);
 	}
 	
-	@CrossOrigin
+	
 	@PostMapping("login")
 	public ResponseEntity<Object> login(@RequestBody UserDTO userDTO) {
 		return userService.findByEmailAndPassword(userDTO);

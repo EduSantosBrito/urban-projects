@@ -13,8 +13,8 @@ public class ProjectConverter {
 		projectDTO.setId(project.getId());
 		projectDTO.setTitle(project.getTitle());
 		projectDTO.setDescription(project.getDescription());
-		projectDTO.setStatus(StatusStateConverter.getStatusStateAsDTO(project.getStatus()));
-		projectDTO.setUsers(project.getUsers() != null ? UserConverter.getListAsDTO(project.getUsers()) : null);
+//		projectDTO.setStatus(StatusStateConverter.getStatusStateAsDTO(project.getStatus()));
+//		projectDTO.setUsers(project.getUsers() != null ? UserConverter.getListAsDTO(project.getUsers()) : null);
 		return projectDTO;
 	}
 	
@@ -23,8 +23,8 @@ public class ProjectConverter {
 		project.setId(projectDTO.getId());
 		project.setTitle(projectDTO.getTitle());
 		project.setDescription(projectDTO.getDescription());
-		project.setStatus(StatusStateConverter.getStatusStateAsModel(projectDTO.getStatus()));
-		project.setUsers(projectDTO.getUsers() != null ? UserConverter.getListAsModel(projectDTO.getUsers()) : null);
+//		project.setStatus(StatusStateConverter.getStatusStateAsModel(projectDTO.getStatus()));
+//		project.setUsers(projectDTO.getUsers() != null ? UserConverter.getListAsModel(projectDTO.getUsers()) : null);
 		return project;
 	}
 	

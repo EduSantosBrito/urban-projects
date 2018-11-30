@@ -24,7 +24,7 @@ public class ProjectService {
 	
 	public void save(ProjectDTO projectDTO) {
 		Project project = ProjectConverter.getProjectAsModel(projectDTO);
-		project.setStatus(statusStateRepository.findStatusContaining(project.getStatus().getStatusName()).orElseThrow(() -> new StatusNotFoundException()));
+//		project.setStatus(statusStateRepository.findStatusContaining(project.getStatus().getStatusName()).orElseThrow(() -> new StatusNotFoundException()));
 		projectRepository.save(project);
 	}
 
